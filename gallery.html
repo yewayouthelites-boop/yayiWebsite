@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery | YAYI 2027</title>
+<meta name="description" content="Photos from the YAYI 2027 campaign trail across Yewa, Egba, Ijebu and Remo: rallies, projects, community visits and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230B7A3B'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Arial' font-weight='900' font-size='36' fill='%23fff'%3EY%3C/text%3E%3Cpolygon points='47,10 49.6,16 56,16.7 51.3,21 52.6,27.3 47,24 41.4,27.3 42.7,21 38,16.7 44.4,16' fill='%23F4A900'/%3E%3C/svg%3E">
+<style>
+
+:root{
+  --green:#0B7A3B; --deep:#064F26; --deeper:#04371B;
+  --gold:#F4A900; --gold-soft:#FFF3D6;
+  --blue:#0055A5; --red:#D7262C;
+  --cream:#F6F8F5; --ink:#1B1B1B; --grey:#5C665F; --line:#E1E8E1;
+  --radius:16px;
+  --shadow:0 10px 30px rgba(6,79,38,.10);
+  --chev:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cpath d='M35 105 L70 52 L105 105 L88 105 L70 78 L52 105 Z' fill='%23ffffff' fill-opacity='0.05'/%3E%3C/svg%3E");
+  --chev-light:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cpath d='M35 105 L70 52 L105 105 L88 105 L70 78 L52 105 Z' fill='%230B7A3B' fill-opacity='0.045'/%3E%3C/svg%3E");
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+body{font-family:'Inter',system-ui,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,.display{font-family:'Montserrat',system-ui,Arial,sans-serif}
+img{max-width:100%;display:block}
+a{color:var(--green)}
+.container{width:min(1160px,92%);margin:0 auto}
+.skip-link{position:absolute;left:-9999px;top:0;background:var(--gold);color:var(--ink);padding:10px 18px;font-weight:700;z-index:200;border-radius:0 0 10px 0}
+.skip-link:focus{left:0}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:4px}
+
+/* ---------- Announcement bar ---------- */
+.announce{background:var(--gold);color:var(--ink);font-size:.85rem;font-weight:600;text-align:center;padding:8px 14px;letter-spacing:.02em}
+
+/* ---------- Header ---------- */
+header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);transition:box-shadow .25s}
+header.scrolled{box-shadow:0 4px 18px rgba(6,79,38,.10)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.badge{width:44px;height:44px;flex:0 0 44px;border-radius:22%;background:var(--green);display:grid;place-items:center;position:relative}
+.badge svg{display:block}
+.brand-name{font-family:'Montserrat';font-weight:900;font-size:1.35rem;color:var(--deep);letter-spacing:.02em}
+.brand-name em{font-style:normal;color:var(--green)}
+.nav-links{display:flex;align-items:center;gap:26px;list-style:none}
+.nav-links a{font-size:.92rem;font-weight:600;color:var(--ink);text-decoration:none;padding:6px 2px;border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--green);border-color:var(--gold)}
+.btn{display:inline-block;font-family:'Montserrat';font-weight:700;font-size:.92rem;padding:12px 24px;border-radius:999px;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .15s,background .2s,color .2s,border-color .2s;text-align:center}
+.btn:active{transform:scale(.97)}
+.btn-gold{background:var(--gold);color:var(--ink)}
+.btn-gold:hover{background:#ffbb1d}
+.btn-green{background:var(--green);color:#fff}
+.btn-green:hover{background:var(--deep)}
+.btn-outline{border-color:rgba(255,255,255,.6);color:#fff}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+.btn-outline-green{border-color:var(--green);color:var(--green)}
+.btn-outline-green:hover{background:var(--green);color:#fff}
+.nav-cta{margin-left:6px}
+.hamburger{display:none;background:none;border:0;cursor:pointer;padding:8px}
+.hamburger span{display:block;width:26px;height:3px;background:var(--deep);margin:5px 0;border-radius:2px;transition:transform .25s,opacity .25s}
+.hamburger[aria-expanded="true"] span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.hamburger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.hamburger[aria-expanded="true"] span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;background:var(--deep) var(--chev);color:#fff;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-140px;bottom:-90px;width:560px;height:560px;background:linear-gradient(135deg,var(--gold) 0%,#ffc63a 100%);clip-path:polygon(50% 0,100% 78%,76% 78%,50% 38%,24% 78%,0 78%);opacity:.16;pointer-events:none}
+.hero-inner{position:relative;z-index:2;padding:84px 0 0;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+.eyebrow::before{content:"";width:26px;height:3px;background:var(--gold);border-radius:2px}
+.hero h1{font-size:clamp(2.5rem,5.5vw,4.4rem);font-weight:900;line-height:1.06;letter-spacing:-.01em}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero .lede{margin-top:20px;font-size:1.1rem;color:rgba(255,255,255,.86);max-width:34rem}
+.hero-ctas{margin-top:32px;display:flex;flex-wrap:wrap;gap:14px}
+.hero-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:var(--radius);padding:26px;backdrop-filter:blur(4px)}
+.hero-card h3{font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:800}
+.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}
+.count-cell{background:rgba(255,255,255,.08);border-radius:12px;padding:12px 6px;text-align:center}
+.count-cell b{font-family:'Montserrat';font-weight:800;font-size:1.6rem;display:block;color:#fff}
+.count-cell span{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.7)}
+.hero-card .pvc{margin-top:16px;font-size:.86rem;color:rgba(255,255,255,.82)}
+.hero-card .pvc a{color:var(--gold);font-weight:600}
+.district-ribbon{position:relative;z-index:2;margin-top:56px;border-top:1px solid rgba(255,255,255,.15);padding:16px 0;overflow:hidden}
+.ribbon-track{display:flex;gap:56px;white-space:nowrap;font-family:'Montserrat';font-weight:700;letter-spacing:.22em;text-transform:uppercase;font-size:.8rem;color:rgba(255,255,255,.55);animation:ribbon 26s linear infinite;width:max-content}
+.ribbon-track span b{color:var(--gold);font-weight:800;margin:0 14px}
+@keyframes ribbon{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ---------- Stats ---------- */
+.stats{background:var(--green);color:#fff}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:34px 0}
+.stat b{font-family:'Montserrat';font-weight:900;font-size:clamp(1.7rem,3vw,2.4rem);display:block}
+.stat b .unit{font-size:.6em;color:var(--gold)}
+.stat span{font-size:.85rem;color:rgba(255,255,255,.85)}
+
+/* ---------- Sections ---------- */
+section{padding:88px 0}
+.section-head{max-width:44rem;margin-bottom:44px}
+.section-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.section-head h2{font-size:clamp(1.8rem,3.4vw,2.6rem);font-weight:800;color:var(--deep);line-height:1.15}
+.section-head h2 em{font-style:normal;color:var(--green)}
+.section-head p{margin-top:14px;color:var(--grey);font-size:1.02rem}
+.bg-cream{background:var(--cream) var(--chev-light)}
+
+/* ---------- About ---------- */
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.portrait{position:relative}
+.portrait-frame{aspect-ratio:4/5;border-radius:20px;background:linear-gradient(160deg,var(--deep),var(--green)) var(--chev);display:grid;place-items:center;color:#fff;box-shadow:var(--shadow);overflow:hidden}
+.portrait-frame .initials{font-family:'Montserrat';font-weight:900;font-size:clamp(4rem,10vw,7rem);color:rgba(255,255,255,.9)}
+.portrait-frame .replace-note{position:absolute;bottom:14px;left:14px;right:14px;font-size:.72rem;color:rgba(255,255,255,.75);background:rgba(0,0,0,.25);padding:8px 12px;border-radius:10px;text-align:center}
+.portrait-tag{position:absolute;top:18px;left:-14px;background:var(--gold);color:var(--ink);font-family:'Montserrat';font-weight:800;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;padding:8px 16px;border-radius:8px;box-shadow:var(--shadow)}
+.about-copy p{margin-bottom:16px;color:#33403a}
+.about-copy p b{color:var(--deep)}
+.timeline{margin-top:34px;position:relative;padding-left:26px}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.tl-item{position:relative;padding:0 0 22px 14px}
+.tl-item::before{content:"";position:absolute;left:-26px;top:6px;width:16px;height:16px;border-radius:50%;background:#fff;border:4px solid var(--green)}
+.tl-item.gold::before{border-color:var(--gold)}
+.tl-item b{font-family:'Montserrat';font-weight:800;color:var(--deep);display:block;font-size:.95rem}
+.tl-item span{font-size:.92rem;color:var(--grey)}
+
+/* ---------- Record cards ---------- */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px;box-shadow:0 4px 16px rgba(6,79,38,.05);transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.card .icon{width:52px;height:52px;border-radius:14px;background:var(--gold-soft);display:grid;place-items:center;margin-bottom:18px}
+.card .icon svg{width:26px;height:26px;stroke:var(--green)}
+.card h3{font-size:1.08rem;font-weight:800;color:var(--deep);margin-bottom:10px}
+.card p{font-size:.93rem;color:var(--grey);flex:1}
+.card .card-tag{margin-top:16px;font-size:.74rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--green)}
+
+/* ---------- Agenda ---------- */
+.agenda-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.pillar{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:box-shadow .2s}
+.pillar:hover{box-shadow:var(--shadow)}
+.pillar-head{width:100%;background:none;border:0;cursor:pointer;padding:24px;display:flex;align-items:center;gap:14px;text-align:left;font-family:'Montserrat';font-weight:800;font-size:1rem;color:var(--deep)}
+.pillar-num{flex:0 0 44px;height:44px;border-radius:12px;background:var(--green);color:#fff;display:grid;place-items:center;font-size:1.15rem}
+.pillar-head .chev-ind{margin-left:auto;transition:transform .25s;color:var(--green);flex:0 0 auto}
+.pillar.open .chev-ind{transform:rotate(180deg)}
+.pillar-body{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.pillar-body ul{list-style:none;padding:0 24px 24px}
+.pillar-body li{position:relative;padding:7px 0 7px 26px;font-size:.92rem;color:#33403a}
+.pillar-body li::before{content:"";position:absolute;left:0;top:13px;width:12px;height:12px;background:var(--gold);clip-path:polygon(50% 0,100% 100%,74% 100%,50% 45%,26% 100%,0 100%)}
+.manifesto-cta{margin-top:40px;text-align:center}
+
+/* ---------- Milestones (endorsement path) ---------- */
+.milestones{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.mile{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:var(--radius);padding:28px}
+.mile time{font-size:.76rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
+.mile h3{margin:10px 0 8px;font-size:1.05rem;font-weight:800;color:#fff}
+.mile p{font-size:.9rem;color:rgba(255,255,255,.8)}
+
+/* ---------- News ---------- */
+.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.news-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+.news-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.news-thumb{height:120px;background:var(--deep) var(--chev);display:flex;align-items:flex-end;padding:14px}
+.news-thumb span{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
+.news-body{padding:22px 22px 26px;display:flex;flex-direction:column;flex:1}
+.news-body time{font-size:.78rem;color:var(--grey)}
+.news-body h3{font-size:1rem;font-weight:700;color:var(--deep);margin:8px 0 10px;line-height:1.4}
+.news-body a.read{margin-top:auto;font-size:.86rem;font-weight:700;text-decoration:none;color:var(--green)}
+.news-body a.read:hover{color:var(--gold)}
+
+/* ---------- Gallery ---------- */
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.g-tile{aspect-ratio:1;border-radius:14px;display:grid;place-items:center;color:#fff;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;text-align:center;padding:10px}
+.g-tile:nth-child(4n+1){background:var(--green) var(--chev)}
+.g-tile:nth-child(4n+2){background:var(--deep) var(--chev)}
+.g-tile:nth-child(4n+3){background:var(--gold);color:var(--ink)}
+.g-tile:nth-child(4n){background:var(--blue)}
+
+/* ---------- Get involved ---------- */
+.involve-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.form-card{background:#fff;border-radius:var(--radius);padding:36px;box-shadow:var(--shadow);border-top:6px solid var(--gold)}
+.form-card h3{font-size:1.3rem;font-weight:800;color:var(--deep);margin-bottom:6px}
+.form-card .sub{font-size:.9rem;color:var(--grey);margin-bottom:22px}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:.82rem;font-weight:600;color:var(--deep);margin-bottom:6px}
+.field input,.field select,.field textarea{width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;font-family:inherit;font-size:.95rem;color:var(--ink);background:#fff;transition:border-color .2s}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--green);outline:none}
+.field .err{display:none;font-size:.78rem;color:#DC3545;margin-top:5px}
+.field.invalid input,.field.invalid select{border-color:#DC3545}
+.field.invalid .err{display:block}
+.form-note{font-size:.76rem;color:var(--grey);margin-top:14px}
+.form-success{display:none;background:#E8F6EE;border:1.5px solid #28A745;color:#14622e;border-radius:12px;padding:16px;font-size:.92rem;margin-bottom:16px}
+.involve-side .why{margin-bottom:26px}
+.involve-side .why h3{font-size:1.15rem;font-weight:800;color:var(--deep);margin-bottom:8px}
+.involve-side .why p{font-size:.94rem;color:var(--grey)}
+.pvc-card{background:var(--deep) var(--chev);color:#fff;border-radius:var(--radius);padding:30px}
+.pvc-card h3{color:var(--gold);font-size:1.05rem;font-weight:800;margin-bottom:8px}
+.pvc-card p{font-size:.9rem;color:rgba(255,255,255,.85)}
+.pvc-card a{color:var(--gold)}
+
+/* ---------- Footer ---------- */
+footer{background:var(--deeper);color:rgba(255,255,255,.8)}
+.foot-top{display:grid;grid-template-columns:1.3fr 1fr 1fr 1.2fr;gap:40px;padding:64px 0 44px}
+.foot-brand p{font-size:.88rem;margin-top:14px;max-width:20rem}
+footer h4{font-family:'Montserrat';font-size:.8rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+footer ul{list-style:none}
+footer ul li{margin-bottom:10px}
+footer a{color:rgba(255,255,255,.8);text-decoration:none;font-size:.9rem}
+footer a:hover{color:var(--gold)}
+.socials{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+.socials a{width:40px;height:40px;border-radius:12px;background:rgba(255,255,255,.08);display:grid;place-items:center;transition:background .2s}
+.socials a:hover{background:var(--green)}
+.socials svg{width:18px;height:18px;fill:#fff}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding:22px 0;font-size:.78rem;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;color:rgba(255,255,255,.6)}
+
+/* ---------- Back to top ---------- */
+.to-top{position:fixed;right:22px;bottom:22px;width:48px;height:48px;border-radius:14px;background:var(--gold);border:0;cursor:pointer;display:grid;place-items:center;box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:opacity .25s;z-index:90}
+.to-top.show{opacity:1;pointer-events:auto}
+.to-top svg{width:20px;height:20px;stroke:var(--ink)}
+
+/* ---------- Reveal ---------- */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:none}
+
+/* ---------- Responsive ---------- */
+@media (max-width:980px){
+  .hero-inner{grid-template-columns:1fr;padding-top:64px}
+  .about-grid,.involve-grid{grid-template-columns:1fr;gap:40px}
+  .cards,.agenda-grid,.news-grid,.milestones{grid-template-columns:repeat(2,1fr)}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .foot-top{grid-template-columns:1fr 1fr}
+  .portrait{max-width:420px}
+}
+@media (max-width:680px){
+  html,body{overflow-x:hidden}
+  section{padding:64px 0}
+  .nav-links{position:fixed;inset:0;top:0;background:var(--deep);flex-direction:column;justify-content:center;gap:26px;transform:translateX(100%);visibility:hidden;transition:transform .3s ease,visibility 0s .3s;z-index:150}
+  .nav-links.open{transform:translateX(0);visibility:visible;transition:transform .3s ease}
+  .nav-links a{color:#fff;font-size:1.2rem}
+  .nav-links .nav-cta{margin:8px 0 0}
+  .hamburger{display:block;z-index:160;position:relative}
+  .hamburger[aria-expanded="true"] span{background:#fff}
+  .cards,.agenda-grid,.news-grid,.milestones,.stats-grid{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .foot-top{grid-template-columns:1fr;gap:30px}
+  .countdown{grid-template-columns:repeat(4,1fr)}
+  .hero-ctas .btn{width:100%}
+}
+
+/* ============ Sub-page additions ============ */
+.page-hero{background:var(--deep) var(--chev);color:#fff;padding:72px 0 56px;position:relative;overflow:hidden}
+.page-hero::after{content:"";position:absolute;right:-120px;bottom:-120px;width:420px;height:420px;background:var(--gold);clip-path:polygon(50% 0,100% 78%,76% 78%,50% 38%,24% 78%,0 78%);opacity:.14;pointer-events:none}
+.crumbs{font-size:.82rem;color:rgba(255,255,255,.65);margin-bottom:16px}
+.crumbs a{color:rgba(255,255,255,.85);text-decoration:none}
+.crumbs a:hover{color:var(--gold)}
+.page-hero h1{font-size:clamp(2.1rem,4.6vw,3.4rem);font-weight:900;line-height:1.1}
+.page-hero h1 em{font-style:normal;color:var(--gold)}
+.page-hero .lede{margin-top:16px;max-width:44rem;color:rgba(255,255,255,.86);font-size:1.05rem}
+.page-hero .hero-ctas{margin-top:26px}
+
+.pillar-full{display:grid;grid-template-columns:64px 1fr;gap:26px;padding:44px 0;border-bottom:1px solid var(--line)}
+.pillar-full:last-of-type{border-bottom:0}
+.pf-num{width:64px;height:64px;border-radius:18px;background:var(--green);color:#fff;display:grid;place-items:center;font-family:'Montserrat';font-weight:900;font-size:1.4rem}
+.pillar-full.alt .pf-num{background:var(--gold);color:var(--ink)}
+.pf-body h2{font-size:1.5rem;font-weight:800;color:var(--deep)}
+.pf-goal{margin-top:8px;color:var(--grey);font-size:.98rem;max-width:46rem}
+.pf-cols{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;margin-top:22px}
+.pf-list{list-style:none}
+.pf-list li{position:relative;padding:8px 0 8px 28px;font-size:.95rem;color:#33403a}
+.pf-list li::before{content:"";position:absolute;left:0;top:14px;width:13px;height:13px;background:var(--gold);clip-path:polygon(50% 0,100% 100%,74% 100%,50% 45%,26% 100%,0 100%)}
+.pf-how{background:var(--cream);border-radius:14px;padding:22px;font-size:.88rem;color:#33403a;align-self:start}
+.pf-how b{display:block;font-family:'Montserrat';font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:8px}
+
+.sector{padding:40px 0;border-bottom:1px solid var(--line)}
+.sector:last-of-type{border-bottom:0}
+.sector-head{display:flex;align-items:center;gap:16px;margin-bottom:18px}
+.sector-head .icon{width:52px;height:52px;border-radius:14px;background:var(--gold-soft);display:grid;place-items:center;flex:0 0 52px}
+.sector-head .icon svg{width:26px;height:26px;stroke:var(--green)}
+.sector-head h2{font-size:1.35rem;font-weight:800;color:var(--deep)}
+.sector p.intro{color:var(--grey);font-size:.96rem;max-width:50rem;margin-bottom:14px}
+.tag-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.tag{background:#EAF3EE;color:var(--deep);font-size:.8rem;font-weight:600;padding:6px 13px;border-radius:999px}
+.sources{background:var(--cream);border-radius:var(--radius);padding:28px;font-size:.85rem;color:var(--grey)}
+.sources h3{font-family:'Montserrat';font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--deep);margin-bottom:12px}
+.sources li{margin-bottom:8px;list-style-position:inside}
+.cta-band{background:var(--green) var(--chev);color:#fff;border-radius:var(--radius);padding:44px;display:flex;align-items:center;justify-content:space-between;gap:26px;flex-wrap:wrap}
+.cta-band h2{font-size:1.6rem;font-weight:800}
+.cta-band p{color:rgba(255,255,255,.85);font-size:.95rem;margin-top:6px}
+
+@media (max-width:680px){
+  .pillar-full{grid-template-columns:1fr;gap:14px}
+  .pf-cols{grid-template-columns:1fr}
+  .cta-band{padding:30px}
+}
+
+.stats-grid.cols-5{grid-template-columns:repeat(5,1fr)}
+@media (max-width:980px){.stats-grid.cols-5{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:680px){.stats-grid.cols-5{grid-template-columns:1fr}}
+
+</style>
+<style>
+/* Gallery-page specific */
+.filter-bar{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:36px}
+.filter-btn{font-family:'Montserrat';font-weight:700;font-size:.85rem;padding:10px 20px;border-radius:999px;border:1.5px solid var(--line);background:#fff;color:var(--deep);cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.filter-btn:hover{border-color:var(--green);color:var(--green)}
+.filter-btn.active{background:var(--green);border-color:var(--green);color:#fff}
+.g-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.g-item{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:4/3;cursor:pointer;background:var(--cream);border:0;padding:0;text-align:left;display:block;width:100%}
+.g-item img{width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+.g-item:hover img{transform:scale(1.05)}
+.g-item .cap{position:absolute;left:0;right:0;bottom:0;padding:34px 16px 14px;background:linear-gradient(transparent,rgba(4,55,27,.85));color:#fff;font-size:.82rem;font-weight:600;opacity:0;transition:opacity .25s}
+.g-item:hover .cap,.g-item:focus-visible .cap{opacity:1}
+.g-item .ph{position:absolute;inset:0;display:none;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:20px;text-align:center;color:#fff}
+.g-item.is-ph .ph{display:flex}
+.g-item.is-ph img{display:none}
+.g-item.is-ph .cap{opacity:1;background:none;position:static;padding:0;font-size:.8rem;color:rgba(255,255,255,.9)}
+.g-item.is-ph{background:var(--green) var(--chev)}
+.g-item.is-ph:nth-child(3n+2){background:var(--deep) var(--chev)}
+.g-item.is-ph:nth-child(3n){background:var(--blue)}
+.ph-badge{width:46px;height:46px;border-radius:14px;background:rgba(255,255,255,.15);display:grid;place-items:center}
+.ph-note{font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.65)}
+.g-item[hidden]{display:none}
+/* Lightbox */
+.lightbox{position:fixed;inset:0;background:rgba(4,55,27,.94);z-index:200;display:none;align-items:center;justify-content:center;flex-direction:column;padding:24px}
+.lightbox.open{display:flex}
+.lb-stage{max-width:min(1000px,94vw);width:100%;display:flex;flex-direction:column;align-items:center}
+.lb-media{width:100%;aspect-ratio:4/3;border-radius:18px;overflow:hidden;background:var(--green) var(--chev);display:flex;align-items:center;justify-content:center}
+.lb-media img{width:100%;height:100%;object-fit:contain;background:#04371B}
+.lb-media .lb-ph{color:#fff;text-align:center;padding:30px;font-size:.95rem}
+.lb-cap{margin-top:16px;color:#fff;font-size:.95rem;font-weight:600;text-align:center}
+.lb-count{margin-top:6px;color:rgba(255,255,255,.6);font-size:.78rem;letter-spacing:.1em}
+.lb-btn{position:fixed;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:16px;border:0;background:rgba(255,255,255,.12);color:#fff;cursor:pointer;display:grid;place-items:center;transition:background .2s}
+.lb-btn:hover{background:var(--gold);color:var(--ink)}
+.lb-prev{left:18px}.lb-next{right:18px}
+.lb-close{position:fixed;top:18px;right:18px;transform:none}
+.lb-btn svg{width:22px;height:22px}
+@media (max-width:980px){.g-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:680px){.g-grid{grid-template-columns:1fr}.lb-btn{width:44px;height:44px}.lb-prev{left:8px}.lb-next{right:8px}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="announce">Official campaign website · Sen. Solomon Olamilekan Adeola (YAYI) · APC Candidate for Governor, Ogun State 2027</div>
+
+<header id="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html" aria-label="YAYI 2027 home">
+      <span class="badge" aria-hidden="true">
+        <svg width="44" height="44" viewBox="0 0 44 44"><text x="22" y="31" text-anchor="middle" font-family="Montserrat, Arial" font-weight="900" font-size="24" fill="#fff">Y</text><polygon points="32,6 34,10.6 39,11.1 35.3,14.5 36.3,19.4 32,16.9 27.7,19.4 28.7,14.5 25,11.1 30,10.6" fill="#F4A900"/></svg>
+      </span>
+      <span class="brand-name">YAYI <em>2027</em></span>
+    </a>
+    <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-menu">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="track-record.html">Track Record</a></li>
+      <li><a href="agenda.html">Agenda</a></li>
+      <li><a href="index.html#momentum">Momentum</a></li>
+      <li><a href="index.html#news">News</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a class="btn btn-gold nav-cta" href="index.html#involve">Get Involved</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main">
+<section class="page-hero">
+  <div class="container" style="position:relative;z-index:2">
+    <p class="crumbs"><a href="index.html">Home</a> / Gallery</p>
+    <h1>On the <em>Ground</em></h1>
+    <p class="lede">Moments from across Yewa, Egba, Ijebu and Remo: rallies, project commissionings, market walks and quiet conversations. This is what the movement looks like.</p>
+  </div>
+</section>
+
+<section style="padding-top:56px">
+  <div class="container">
+    <div class="filter-bar" role="tablist" aria-label="Filter gallery">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="events">Rallies &amp; Events</button>
+      <button class="filter-btn" data-filter="projects">Projects</button>
+      <button class="filter-btn" data-filter="community">Community</button>
+      <button class="filter-btn" data-filter="leaders">With Leaders</button>
+    </div>
+
+    <!--
+      HOW TO ADD PHOTOS
+      1. Create a folder named "images" beside this file.
+      2. Save your photos with the filenames below (gallery-01.jpg ... gallery-12.jpg).
+      3. Refresh the page. Any photo that exists replaces its placeholder automatically.
+      To add more slots, copy a <button class="g-item"> block, increment the number, and set data-cat + caption.
+      Recommended size: 1600x1200px (4:3), under 400KB each for fast loading.
+    -->
+    <div class="g-grid" id="gallery">
+      <button class="g-item" data-cat="events" aria-label="View photo: Campaign flag-off rally, Abeokuta">
+        <img src="images/gallery-01.jpg" alt="Campaign flag-off rally in Abeokuta" loading="lazy">
+        <span class="ph"><span class="ph-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M21 15l-5-4-8 6"/></svg></span><span class="cap">Campaign flag-off rally, Abeokuta</span><span class="ph-note">Add images/gallery-01.jpg</span></span>
+        <span class="cap">Campaign flag-off rally, Abeokuta</span>
+      </button>
+      <button class="g-item" data-cat="leaders" aria-label="View photo: Visit to the Olusegun Obasanjo Presidential Library">
+        <img src="images/gallery-02.jpg" alt="Visit to the Olusegun Obasanjo Presidential Library, Abeokuta" loading="lazy">
+        <span class="ph"><span class="ph-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M21 15l-5-4-8 6"/></svg></span><span class="cap">Visit to the Olusegun Obasanjo Presidential Library</span><span class="ph-note">Add images/gallery-02.jpg</span></span>
+        <span class="cap">Visit to the Olusegun Obasanjo Presidential Library</span>
+      </button>
+      <button class="g-item" data-cat="events" aria-label="View photo: Ojude Oba festival, Ijebu Ode">
+        <img src="images/gallery-03.jpg" alt="Ojude Oba festival, Ijebu Ode" loading="lazy">
+        <span class="ph"><span class="ph-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M21 15l-5-4-8 6"/></svg></span><span class="cap">Ojude Oba festival, Ijebu Ode</span><span class="ph-note">Add images/gallery-03.jpg</span></span>
+        <span class="cap">Ojude Oba festival, Ijebu Ode</span>
+      </button>
+      <button class="g-item" data-cat="projects" aria-label="View photo: Commissioning a motorised borehole, Yewa North">
+        <img src="images/gallery-04.jpg" alt="Commissioning a motorised borehole in Yewa North" loading="lazy">
+        <span class="ph"><span class="ph-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M21 15l-5-4-8 6"/></svg></span><span class="cap">Commissioning a motorised borehole, Yewa North</span><span class="ph-note">Add images/gallery-04.jpg</span></span>
+        <span class="cap">Commissioning a motorised borehole, Yewa North</span>
+      </button>
+      <button class="g-item" data-cat="projects" aria-label="View photo: Agbara Ultramodern Market">
+        <img src="images/gallery-05.jpg" alt="Agbara Ultramodern Market" loading="lazy">
+        <span class="ph"><span class="ph-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M21 15l-5-4-8 6"/></svg></span><span class="cap">Agbara Ultramodern Market</span><span class="ph-note">Add images/gallery-05.jpg</span></span>
+        <span class="cap">Agbara Ultramodern Market</span>
+      </button>
+      <button class="g-item" data-cat="community" aria-label="View photo: Market walk, Kuto, Abeokuta">
+        <img src="images/gallery-06.jpg" alt="Market walk at Kuto, Abeokuta" loading="lazy">
+        <span class="ph"><span class="ph-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M21 15l-5-4-8 6"/></svg></span><span class="cap">Market walk, Kuto, Abeokuta</span><span class="ph-note">Add images/gallery-06.jpg</span></span>
+        <span class="cap">Market walk, Kuto, Abeokuta</span>
+      </button>
+      <button class="g-item" data-cat="community" aria-label="View photo: Town hall meeting, Ilaro">
+        <img src="images/gallery-07.jpg" alt="Town hall meeting in Ilaro" loading="lazy">
+        <span class="ph"><span class="ph-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M21 15l-5-4-8 6"/></svg></span><span class="cap">Town hall meeting, Ilaro</span><span class="ph-note">Add images/gallery-07.jpg</span></span>
+        <span class="cap">Town hall meeting, Ilaro</span>
+      </button>
+      <button class="g-item" data-cat="leaders" aria-label="View photo: With the Ijebu Traditional Council">
+        <img src="images/gallery-08.jpg" alt="Consultative visit with the Ijebu Traditional Council" loading="lazy">
+        <span class="ph"><span class="ph-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M21 15l-5-4-8 6"/></svg></span><span class="cap">With the Ijebu Traditional Council</span><span class="ph-note">Add images/gallery-08.jpg</span></span>
+        <span class="cap">With the Ijebu Traditional Council</span>
+      </button>
+      <button class="g-item" data-cat="projects" aria-label="View photo: Renovated classroom block handover">
+        <img src="images/gallery-09.jpg" alt="Renovated classroom block handover" loading="lazy">
+        <span class="ph"><span class="ph-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M21 15l-5-4-8 6"/></svg></span><span class="cap">Renovated classroom block handover</span><span class="ph-note">Add images/gallery-09.jpg</span></span>
+        <span class="cap">Renovated classroom block handover</span>
+      </button>
+      <button class="g-item" data-cat="events" aria-label="View photo: Mega Empowerment Programme, Ota">
+        <img src="images/gallery-10.jpg" alt="Mega Empowerment Programme in Ota" loading="lazy">
+        <span class="ph"><span class="ph-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M21 15l-5-4-8 6"/></svg></span><span class="cap">Mega Empowerment Programme, Ota</span><span class="ph-note">Add images/gallery-10.jpg</span></span>
+        <span class="cap">Mega Empowerment Programme, Ota</span>
+      </button>
+      <button class="g-item" data-cat="community" aria-label="View photo: Farmers' forum, Imeko Afon">
+        <img src="images/gallery-11.jpg" alt="Farmers' forum in Imeko Afon" loading="lazy">
+        <span class="ph"><span class="ph-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M21 15l-5-4-8 6"/></svg></span><span class="cap">Farmers' forum, Imeko Afon</span><span class="ph-note">Add images/gallery-11.jpg</span></span>
+        <span class="cap">Farmers' forum, Imeko Afon</span>
+      </button>
+      <button class="g-item" data-cat="leaders" aria-label="View photo: APC caucus, consensus announcement">
+        <img src="images/gallery-12.jpg" alt="APC caucus consensus announcement" loading="lazy">
+        <span class="ph"><span class="ph-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M21 15l-5-4-8 6"/></svg></span><span class="cap">APC caucus, consensus announcement</span><span class="ph-note">Add images/gallery-12.jpg</span></span>
+        <span class="cap">APC caucus, consensus announcement</span>
+      </button>
+    </div>
+
+    <p style="margin-top:26px;font-size:.82rem;color:var(--grey);text-align:center">Tiles showing the camera icon are placeholders. Drop your photos into an <b>images</b> folder using the filenames shown and they will appear automatically. Use only photos the campaign owns or has permission to publish.</p>
+  </div>
+</section>
+
+<section class="bg-cream" style="padding-top:56px">
+  <div class="container">
+    <div class="cta-band reveal">
+      <div>
+        <h2>Be in the next photo.</h2>
+        <p>Rallies, outreach days and town halls are happening across all 20 LGAs.</p>
+      </div>
+      <div style="display:flex;gap:14px;flex-wrap:wrap">
+        <a href="index.html#involve" class="btn btn-gold">Volunteer Now</a>
+        <a href="index.html#news" class="btn btn-outline">Campaign News</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lb-btn lb-close" id="lb-close" aria-label="Close viewer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <button class="lb-btn lb-prev" id="lb-prev" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 6l-6 6 6 6"/></svg></button>
+  <div class="lb-stage">
+    <div class="lb-media" id="lb-media"></div>
+    <div class="lb-cap" id="lb-cap"></div>
+    <div class="lb-count" id="lb-count"></div>
+  </div>
+  <button class="lb-btn lb-next" id="lb-next" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+
+<footer>
+  <div class="container foot-top">
+    <div class="foot-brand">
+      <a class="brand" href="index.html" aria-label="YAYI 2027 home">
+        <span class="badge" aria-hidden="true">
+          <svg width="44" height="44" viewBox="0 0 44 44"><text x="22" y="31" text-anchor="middle" font-family="Montserrat, Arial" font-weight="900" font-size="24" fill="#fff">Y</text><polygon points="32,6 34,10.6 39,11.1 35.3,14.5 36.3,19.4 32,16.9 27.7,19.4 28.7,14.5 25,11.1 30,10.6" fill="#F4A900"/></svg>
+        </span>
+        <span class="brand-name" style="color:#fff">YAYI <em style="color:var(--gold)">2027</em></span>
+      </a>
+      <p>Forward Together, Ogun. The official campaign of Sen. Solomon Olamilekan Adeola for Governor of Ogun State, 2027.</p>
+    </div>
+    <div>
+      <h4>Campaign</h4>
+      <ul>
+        <li><a href="index.html#about">About YAYI</a></li>
+        <li><a href="track-record.html">Track Record</a></li>
+        <li><a href="agenda.html">Agenda for Ogun</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Take Action</h4>
+      <ul>
+        <li><a href="index.html#involve">Volunteer</a></li>
+        <li><a href="https://cvr.inecnigeria.org" target="_blank" rel="noopener">Check your PVC</a></li>
+        <li><a href="https://yayiadeola.com.ng" target="_blank" rel="noopener">Senator's official site</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li>Senator Solomon Adeola Crescent,<br>Ilaro, Ogun State</li>
+        <li><a href="mailto:aremoyayiadeola@gmail.com">aremoyayiadeola@gmail.com</a></li>
+        <li><a href="tel:+2348139338112">+234 813 933 8112</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container foot-bottom">
+    <span>© 2026 YAYI 2027 Campaign Organisation. All rights reserved.</span>
+    <span>Produced in compliance with the Electoral Act &amp; INEC guidelines. Not an INEC website.</span>
+  </div>
+</footer>
+
+<button class="to-top" id="to-top" aria-label="Back to top">
+  <svg fill="none" stroke-width="2.5" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg>
+</button>
+<script>
+
+// ---------- Mobile nav ----------
+const burger = document.querySelector('.hamburger');
+const menu = document.getElementById('nav-menu');
+burger.addEventListener('click', () => {
+  const open = menu.classList.toggle('open');
+  burger.setAttribute('aria-expanded', open);
+  burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  document.body.style.overflow = open ? 'hidden' : '';
+});
+menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  menu.classList.remove('open');
+  burger.setAttribute('aria-expanded', 'false');
+  document.body.style.overflow = '';
+}));
+
+// ---------- Header shadow + back-to-top ----------
+const header = document.getElementById('site-header');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 10);
+  const tt = document.getElementById('to-top');
+  if (tt) tt.classList.toggle('show', window.scrollY > 600);
+}, {passive:true});
+const toTop = document.getElementById('to-top');
+if (toTop) toTop.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+
+// ---------- Scroll reveal ----------
+const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); } });
+}, {threshold:.12});
+document.querySelectorAll('.reveal').forEach(el => {
+  if (prefersReduced) el.classList.add('visible'); else io.observe(el);
+});
+
+// ---------- Agenda accordion (if present) ----------
+document.querySelectorAll('.pillar-head').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const pillar = btn.closest('.pillar');
+    const body = pillar.querySelector('.pillar-body');
+    const open = pillar.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open);
+    body.style.maxHeight = open ? body.scrollHeight + 'px' : '0';
+  });
+});
+
+</script>
+<script>
+// ---------- Placeholder fallback: mark tiles whose image is missing ----------
+document.querySelectorAll('.g-item img').forEach(img => {
+  img.addEventListener('error', () => img.closest('.g-item').classList.add('is-ph'));
+  if (img.complete && img.naturalWidth === 0) img.closest('.g-item').classList.add('is-ph');
+});
+
+// ---------- Category filter ----------
+const filterBtns = document.querySelectorAll('.filter-btn');
+const items = [...document.querySelectorAll('.g-item')];
+filterBtns.forEach(btn => btn.addEventListener('click', () => {
+  filterBtns.forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const f = btn.dataset.filter;
+  items.forEach(it => it.hidden = (f !== 'all' && it.dataset.cat !== f));
+}));
+
+// ---------- Lightbox ----------
+const lb = document.getElementById('lightbox');
+const lbMedia = document.getElementById('lb-media');
+const lbCap = document.getElementById('lb-cap');
+const lbCount = document.getElementById('lb-count');
+let current = 0, lastFocus = null;
+
+function visibleItems(){ return items.filter(it => !it.hidden); }
+
+function show(i){
+  const list = visibleItems();
+  if (!list.length) return;
+  current = (i + list.length) % list.length;
+  const it = list[current];
+  const cap = it.querySelector('.cap').textContent;
+  lbMedia.innerHTML = '';
+  if (it.classList.contains('is-ph')){
+    const d = document.createElement('div');
+    d.className = 'lb-ph';
+    d.textContent = 'Photo coming soon: ' + cap;
+    lbMedia.appendChild(d);
+  } else {
+    const src = it.querySelector('img').getAttribute('src');
+    const im = document.createElement('img');
+    im.src = src; im.alt = cap;
+    lbMedia.appendChild(im);
+  }
+  lbCap.textContent = cap;
+  lbCount.textContent = (current + 1) + ' / ' + list.length;
+}
+
+function openLb(it){
+  lastFocus = document.activeElement;
+  lb.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  show(visibleItems().indexOf(it));
+  document.getElementById('lb-close').focus();
+}
+function closeLb(){
+  lb.classList.remove('open');
+  document.body.style.overflow = '';
+  if (lastFocus) lastFocus.focus();
+}
+
+items.forEach(it => it.addEventListener('click', () => openLb(it)));
+document.getElementById('lb-close').addEventListener('click', closeLb);
+document.getElementById('lb-prev').addEventListener('click', () => show(current - 1));
+document.getElementById('lb-next').addEventListener('click', () => show(current + 1));
+lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+document.addEventListener('keydown', e => {
+  if (!lb.classList.contains('open')) return;
+  if (e.key === 'Escape') closeLb();
+  if (e.key === 'ArrowLeft') show(current - 1);
+  if (e.key === 'ArrowRight') show(current + 1);
+});
+</script>
+</body>
+</html>
