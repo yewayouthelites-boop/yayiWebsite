@@ -54,7 +54,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 7,
-    category: "community",
+    category: "community",    
     title: "Town hall meeting, Ilaro",
     image: "/images/gallery-07.jpg",
   },
@@ -302,33 +302,6 @@ export default function Gallery() {
                     }}
                   />
 
-                  {/* Placeholder */}
-                  <div className="absolute inset-0 -z-0 flex flex-col items-center justify-center gap-3 bg-[#0B7A3B] p-5 text-center text-white">
-                    <div className="grid h-12 w-12 place-items-center rounded-[14px] bg-white/15 text-xl">
-                      📷
-                    </div>
-
-                    <span className="text-sm font-semibold">
-                      {item.title}
-                    </span>
-
-                    <span className="text-[10px] uppercase tracking-wider text-white/65">
-                      Add images/gallery-{String(item.id).padStart(2, "0")}.jpg
-                    </span>
-                  </div>
-
-                  {/* Image */}
-                  <img
-                    src={item.image}
-                    alt=""
-                    aria-hidden="true"
-                    loading="lazy"
-                    className="absolute inset-0 z-10 h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                    onError={(event) => {
-                      event.currentTarget.style.display = "none";
-                    }}
-                  />
-
                   {/* Caption */}
                   <span className="absolute inset-x-0 bottom-0 z-20 bg-gradient-to-t from-[#04371B] to-transparent px-4 pb-4 pt-12 text-sm font-semibold text-white opacity-0 transition group-hover:opacity-100">
                     {item.title}
@@ -337,12 +310,6 @@ export default function Gallery() {
               ))}
             </div>
 
-            <p className="mt-7 text-center text-xs text-[#5C665F]">
-              Tiles showing the camera icon are placeholders. Drop your photos
-              into an <strong>images</strong> folder using the filenames shown
-              and they will appear automatically. Use only photos the campaign
-              owns or has permission to publish.
-            </p>
           </div>
         </section>
 
@@ -425,19 +392,7 @@ export default function Gallery() {
                 }}
               />
 
-              <div className="absolute px-8 text-center text-white">
-                <div className="mx-auto mb-3 grid h-14 w-14 place-items-center rounded-2xl bg-white/10 text-2xl">
-                  📷
-                </div>
-
-                <p className="text-sm">
-                  Add this image to display it here:
-                </p>
-
-                <p className="mt-1 text-xs text-white/60">
-                  {selectedItem.image}
-                </p>
-              </div>
+              
             </div>
 
             <p className="mt-4 text-center text-base font-semibold text-white">

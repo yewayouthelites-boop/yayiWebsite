@@ -1,11 +1,17 @@
-import { FormEvent, useEffect, useState } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaYoutube,
+  FaTiktok,
+} from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const GREEN = "#0B7A3B";
 const DEEP = "#064F26";
 const DEEPER = "#04371B";
 const GOLD = "#F4A900";
-const CREAM = "#F6F8F5";
 const GREY = "#5C665F";
 
 const agendaItems = [
@@ -253,6 +259,34 @@ export default function Home() {
       behavior: "smooth",
     });
   };
+
+  const socials = [
+                    {
+                      name: "Facebook",
+                      url: "https://web.facebook.com/YAYIAdeola.ng",
+                      icon: <FaFacebookF />,
+                    },
+                    {
+                      name: "X",
+                      url: "https://x.com/AdeolaYAYI",
+                      icon: <FaXTwitter />,
+                    },
+                    {
+                      name: "Instagram",
+                      url: "https://www.instagram.com/yayiadeola",
+                      icon: <FaInstagram />,
+                    },
+                    {
+                      name: "TikTok",
+                      url: "https://www.tiktok.com/@senatoryayi",
+                      icon: <FaTiktok />,
+                    },
+                    {
+                      name: "YouTube",
+                      url: "https://www.youtube.com/@yayiadeola",
+                      icon: <FaYoutube />,
+                    },
+];
 
   return (
     <div className="min-h-screen bg-white text-[#1B1B1B]">
@@ -566,12 +600,11 @@ export default function Home() {
                   background: `linear-gradient(160deg, ${DEEP}, ${GREEN})`,
                 }}
               >
-
-                <img
-                  src="yayi-react\src\img\image.png"
-                //   alt="Aremo YAYI PORTRAIT"
-                  className="relative h-full w-full object-cover"
-                />
+              <img
+                src="/images/image.png"
+                alt="Aremo YAYI Portrait"
+                className="relative h-full w-full object-cover"
+              />
               </div>
 
               <span
@@ -931,27 +964,38 @@ export default function Home() {
 
             <div className="grid grid-cols-2 gap-3.5 md:grid-cols-4">
               {[
-                "Town hall · Ilaro",
-                "Market walk · Kuto, Abeokuta",
-                "Project commissioning · Ota",
-                "Ojude Oba · Ijebu Ode",
-              ].map((title, index) => (
+                {
+                  image: "/images/gallery-01.jpg",
+                  title: "Town hall · Ilaro",
+                },
+                {
+                  image: "/images/gallery-02.jpg",
+                  title: "Market walk · Abeokuta",
+                },
+                {
+                  image: "/images/gallery-03.jpg",
+                  title: "Project commissioning · Ota",
+                },
+                {
+                  image: "/images/gallery-04.jpg",
+                  title: "Ojude Oba · Ijebu Ode",
+                },
+              ].map((item) => (
                 <div
-                  key={title}
-                  className="grid aspect-square place-items-center rounded-[14px] p-3 text-center text-xs font-semibold uppercase tracking-wider"
-                  style={{
-                    backgroundColor:
-                      index === 0
-                        ? GREEN
-                        : index === 1
-                          ? DEEP
-                          : index === 2
-                            ? GOLD
-                            : "#0055A5",
-                    color: index === 2 ? "#1B1B1B" : "#fff",
-                  }}
+                  key={item.title}
+                  className="relative overflow-hidden rounded-[14px] aspect-square group"
                 >
-                  {title}
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="h-full w-full object-cover transition duration-300 group-hover:scale-110"
+                  />
+
+                  <div className="absolute inset-0 bg-black/35 flex items-end p-3">
+                    <span className="text-xs font-semibold uppercase tracking-wide text-white">
+                      {item.title}
+                    </span>
+                  </div>
                 </div>
               ))}
             </div>
@@ -1229,24 +1273,20 @@ export default function Home() {
             </p>
 
             <div className="mt-4 flex flex-wrap gap-2.5">
-              {[
-                ["Facebook", "https://web.facebook.com/YAYIAdeola.ng"],
-                ["X", "https://x.com/AdeolaYAYI"],
-                ["Instagram", "https://www.instagram.com/yayiadeola"],
-                ["TikTok", "https://www.tiktok.com/@senatoryayi"],
-                ["YouTube", "https://www.youtube.com/@yayiadeola"],
-              ].map(([name, url]) => (
+            <div className="mt-5 flex gap-3">
+              {socials.map((social) => (
                 <a
-                  key={name}
-                  href={url}
+                  key={social.name}
+                  href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={name}
-                  className="grid h-10 w-10 place-items-center rounded-xl bg-white/[.08] text-xs font-bold text-white transition hover:bg-[#0B7A3B]"
+                  aria-label={social.name}
+                  className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/10 text-xl text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#F4A900] hover:text-[#064F26]"
                 >
-                  {name[0]}
+                  {social.icon}
                 </a>
               ))}
+            </div>
             </div>
           </div>
 

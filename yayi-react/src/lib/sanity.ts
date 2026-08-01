@@ -1,8 +1,13 @@
 import { createClient } from "@sanity/client";
 
 export const sanityClient = createClient({
+
   projectId: import.meta.env.VITE_SANITY_PROJECT_ID,
+
   dataset: import.meta.env.VITE_SANITY_DATASET,
-  apiVersion: "2026-07-29",
+
+  apiVersion: import.meta.env.VITE_SANITY_API_VERSION,
+
   useCdn: true,
+
 });
