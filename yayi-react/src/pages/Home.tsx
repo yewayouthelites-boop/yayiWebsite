@@ -12,7 +12,6 @@ const GREEN = "#0B7A3B";
 const DEEP = "#064F26";
 const DEEPER = "#04371B";
 const GOLD = "#F4A900";
-const GREY = "#5C665F";
 
 const agendaItems = [
   {
