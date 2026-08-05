@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
+import MobileNav from "../components/MobileNav";
 
 const pillars = [
   {
@@ -145,6 +147,8 @@ export default function Agenda() {
               Get Involved
             </Link>
           </nav>
+
+          <MobileNav />
         </div>
       </header>
 
@@ -324,72 +328,5 @@ export default function Agenda() {
 
       <Footer />
     </div>
-  );
-}
-
-function Footer() {
-  return (
-    <footer className="bg-[#04371B] text-white/80">
-      <div className="mx-auto grid w-[92%] max-w-[1160px] grid-cols-1 gap-10 py-16 md:grid-cols-3 lg:grid-cols-4">
-        <div>
-          <Link to="/" className="text-2xl font-black text-white">
-            YAYI <span className="text-[#F4A900]">2027</span>
-          </Link>
-
-          <p className="mt-3 max-w-xs text-sm">
-            Forward Together, Ogun. The official campaign of Sen. Solomon
-            Olamilekan Adeola for Governor of Ogun State, 2027.
-          </p>
-        </div>
-
-        <div>
-          <h4 className="mb-4 text-xs font-extrabold uppercase tracking-widest text-[#F4A900]">
-            Campaign
-          </h4>
-          <ul className="space-y-2 text-sm">
-            <li><Link to="/about">About YAYI</Link></li>
-            <li><Link to="/track-record">Track Record</Link></li>
-            <li><Link to="/agenda">Agenda for Ogun</Link></li>
-            <li><Link to="/news">News</Link></li>
-            <li><Link to="/gallery">Gallery</Link></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 className="mb-4 text-xs font-extrabold uppercase tracking-widest text-[#F4A900]">
-            Take Action
-          </h4>
-          <ul className="space-y-2 text-sm">
-            <li><Link to="/#involve">Volunteer</Link></li>
-            <li>
-              <a href="https://cvr.inecnigeria.org">Check your PVC</a>
-            </li>
-            <li>
-              <a href="https://yayiadeola.com.ng">Senator&apos;s official site</a>
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 className="mb-4 text-xs font-extrabold uppercase tracking-widest text-[#F4A900]">
-            Contact
-          </h4>
-          <p className="text-sm">
-            Senator Solomon Adeola Crescent,
-            <br />
-            Ilaro, Ogun State
-          </p>
-          <p className="mt-2 text-sm">aremoyayiadeola@gmail.com</p>
-          <p className="mt-1 text-sm">+234 813 933 8112</p>
-        </div>
-      </div>
-
-      <div className="border-t border-white/10">
-        <div className="mx-auto flex w-[92%] max-w-[1160px] flex-wrap justify-between gap-3 py-5 text-xs text-white/60">
-          <span>© 2026 YAYI 2027 Campaign Organisation. All rights reserved.</span>
-          <span>Not an INEC website.</span>
-        </div>
-      </div>
-    </footer>
   );
 }

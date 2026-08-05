@@ -1,4 +1,6 @@
 import { Link, useParams } from "react-router-dom";
+import Footer from "../components/Footer";
+import MobileNav from "../components/MobileNav";
 import { useEffect, useState } from "react";
 import { sanityClient } from "../lib/sanity";
 import { urlFor } from "../lib/image";
@@ -214,21 +216,32 @@ export default function NewsPost() {
         <div className="mx-auto flex w-[92%] max-w-[1160px] items-center justify-between py-5">
 
 
-          <Link
-            to="/news"
-            className="font-bold text-[#0B7A3B]"
-          >
-            ← Back to News
+          <Link to="/" className="flex items-center gap-2.5 no-underline">
+
+            <span className="grid h-11 w-11 place-items-center rounded-[22%] bg-[#0B7A3B] text-2xl font-black text-white">
+              Y
+            </span>
+
+            <span className="text-[1.35rem] font-black text-[#064F26]">
+              YAYI <span className="text-[#0B7A3B]">2027</span>
+            </span>
+
           </Link>
 
 
 
-          <Link
-            to="/"
-            className="text-xl font-black text-[#064F26]"
-          >
-            YAYI <span className="text-[#F4A900]">2027</span>
-          </Link>
+          <div className="flex items-center gap-4">
+
+            <Link
+              to="/news"
+              className="hidden font-bold text-[#0B7A3B] sm:inline"
+            >
+              ← Back to News
+            </Link>
+
+            <MobileNav />
+
+          </div>
 
 
 
@@ -451,7 +464,7 @@ export default function NewsPost() {
 
       </main>
 
-
+      <Footer />
 
     </div>
 
