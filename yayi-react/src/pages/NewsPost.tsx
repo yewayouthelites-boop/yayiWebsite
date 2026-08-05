@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import Footer from "../components/Footer";
 import MobileNav from "../components/MobileNav";
+import Comments from "../components/Comments";
 import { useEffect, useState } from "react";
 import { sanityClient } from "../lib/sanity";
 import { urlFor } from "../lib/image";
@@ -455,6 +456,9 @@ export default function NewsPost() {
 
 
           </div>
+
+
+          <Comments slug={slug ?? ""} />
 
 
 
