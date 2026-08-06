@@ -9,6 +9,7 @@ import { PortableText } from "@portabletext/react";
 
 
 type Post = {
+  _id: string;
   title: string;
   publishedAt: string;
   mainImage?: any;
@@ -104,6 +105,7 @@ export default function NewsPost() {
 
           `
           *[_type == "post" && slug.current == $slug][0]{
+            _id,
             title,
             publishedAt,
             mainImage,
@@ -458,7 +460,7 @@ export default function NewsPost() {
           </div>
 
 
-          <Comments slug={slug ?? ""} />
+          <Comments postId={post._id} />
 
 
 
