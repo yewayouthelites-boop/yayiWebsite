@@ -8,11 +8,11 @@ export default defineType({
   fields: [
     defineField({
       name: 'approved',
-      title: 'Approved',
+      title: 'Visible on website',
       type: 'boolean',
       description:
-        'Comments are hidden from the website until you switch this on.',
-      initialValue: false,
+        'Comments go live immediately. Switch this off to hide one, or delete the document to remove it for good.',
+      initialValue: true,
     }),
 
     defineField({

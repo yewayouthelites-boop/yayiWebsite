@@ -61,7 +61,7 @@ export default async function handler(request, response) {
       _type: "comment",
       name: name.slice(0, 120),
       text,
-      approved: false,
+      approved: true,
       submittedAt: new Date().toISOString(),
       post: {
         _type: "reference",
