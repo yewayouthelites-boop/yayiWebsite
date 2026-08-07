@@ -475,7 +475,7 @@ export default function Home() {
           </div>
 
           <div className="relative z-10 mt-14 overflow-hidden border-t border-white/15 py-4">
-            <div className="flex w-max animate-[ribbon_26s_linear_infinite] gap-14 whitespace-nowrap font-montserrat text-2xl font-bold uppercase tracking-[.22em] text-white/55">
+            <div className="flex w-max animate-[ribbon_26s_linear_infinite] gap-14 whitespace-nowrap font-montserrat text-base font-bold uppercase tracking-[.22em] text-white/55">
               <span>
                 Yewa <b style={{ color: GOLD }}>▲</b> Egba{" "}
                 <b style={{ color: GOLD }}>▲</b> Ijebu{" "}
