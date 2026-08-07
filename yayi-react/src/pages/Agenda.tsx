@@ -99,10 +99,10 @@ const accountabilityPoints = [
 export default function Agenda() {
   return (
     <div className="min-h-screen bg-white text-[#1B1B1B]">
-      <div className="bg-[#F4A900] px-4 py-2 text-center text-sm font-semibold">
+      {/* <div className="bg-[#F4A900] px-4 py-2 text-center text-sm font-semibold">
         Official campaign website · Sen. Solomon Olamilekan Adeola (YAYI) · APC
         Candidate for Governor, Ogun State 2027
-      </div>
+      </div> */}
 
       <header className="sticky top-0 z-50 border-b border-[#E1E8E1] bg-white/95 backdrop-blur">
         <div className="mx-auto flex w-[92%] max-w-[1160px] items-center justify-between py-3.5">

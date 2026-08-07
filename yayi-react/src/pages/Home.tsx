@@ -245,13 +245,13 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white text-[#1B1B1B]">
       {/* Announcement */}
-      <div
+      {/* <div
         className="px-4 py-2 text-center text-sm font-semibold"
         style={{ backgroundColor: GOLD }}
       >
         Official campaign website · Sen. Solomon Olamilekan Adeola (YAYI) · APC
         Candidate for Governor, Ogun State 2027
-      </div>
+      </div> */}
 
       {/* Header */}
       <header
@@ -378,8 +378,8 @@ export default function Home() {
         {/* HERO */}
         <section
           id="home"
-          className="relative overflow-hidden text-white"
-          style={{ backgroundColor: DEEP }}
+          className="relative overflow-hidden text-white page-hero hero"
+          style={{ backgroundColor: 'var(--deep)', backgroundImage: 'var(--chev)' }}
         >
           <div className="mx-auto grid w-[92%] max-w-[1160px] grid-cols-1 items-center gap-12 pb-0 pt-20 lg:grid-cols-[1.15fr_.85fr]">
             <div className="relative z-10">
@@ -461,7 +461,7 @@ export default function Home() {
               <p className="mt-4 text-sm text-white/80">
                 Your voice is your vote. Get your{" "}
                 <a
-                  href="https://www.inecnigeria.org"
+                  href="https://cvr.inecnigeria.org"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-semibold"
@@ -475,7 +475,7 @@ export default function Home() {
           </div>
 
           <div className="relative z-10 mt-14 overflow-hidden border-t border-white/15 py-4">
-            <div className="flex w-max animate-[ribbon_26s_linear_infinite] gap-14 whitespace-nowrap text-xs font-bold uppercase tracking-[.22em] text-white/55">
+            <div className="flex w-max animate-[ribbon_26s_linear_infinite] gap-14 whitespace-nowrap font-montserrat text-2xl font-bold uppercase tracking-[.22em] text-white/55">
               <span>
                 Yewa <b style={{ color: GOLD }}>▲</b> Egba{" "}
                 <b style={{ color: GOLD }}>▲</b> Ijebu{" "}
