@@ -153,7 +153,7 @@ export default function Agenda() {
       </header>
 
       <main>
-        <section className="relative overflow-hidden bg-[#064F26] py-[72px] text-white">
+        <section className="relative overflow-hidden bg-[#064F26] py-[72px] text-white page-hero">
           <div className="mx-auto w-[92%] max-w-[1160px]">
             <p className="mb-4 text-sm text-white/65">
               <Link to="/" className="text-white/85 hover:text-[#F4A900]">
@@ -295,7 +295,7 @@ export default function Agenda() {
               document.
             </p>
 
-            <div className="flex flex-wrap items-center justify-between gap-6 rounded-2xl bg-[#0B7A3B] p-8 text-white md:p-11">
+            <div className="flex flex-wrap items-center justify-between gap-6 rounded-2xl bg-[#0B7A3B] p-8 text-white md:p-11" style={{ backgroundColor: 'var(--deep)', backgroundImage: 'var(--chev)' }}>
               <div>
                 <h2 className="text-2xl font-extrabold">
                   An agenda is only as strong as the people behind it.

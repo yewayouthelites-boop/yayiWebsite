@@ -236,7 +236,7 @@ export default function Gallery() {
 
       <main>
         {/* Hero */}
-        <section className="relative overflow-hidden bg-[#064F26] py-[72px] text-white">
+        <section className="relative overflow-hidden bg-[#064F26] py-[72px] text-white page-hero">
           <div className="relative z-10 mx-auto w-[92%] max-w-[1160px]">
             <p className="mb-4 text-sm text-white/65">
               <Link to="/" className="text-white/85 hover:text-[#F4A900]">
@@ -258,7 +258,7 @@ export default function Gallery() {
         </section>
 
         {/* Gallery */}
-        <section className="py-14 md:py-20">
+        <section className="py-14 md:py-20" style={{ backgroundColor: 'var(--cream)', backgroundImage: 'var(--chev-light)' }}>
           <div className="mx-auto w-[92%] max-w-[1160px]">
             {/* Filters */}
             <div
@@ -318,9 +318,9 @@ export default function Gallery() {
         </section>
 
         {/* CTA */}
-        <section className="bg-[#F6F8F5] py-14">
+      <section className="bg-[#F6F8F5] py-14">
           <div className="mx-auto w-[92%] max-w-[1160px]">
-            <div className="flex flex-wrap items-center justify-between gap-7 rounded-2xl bg-[#0B7A3B] p-8 text-white md:p-11">
+            <div className="flex flex-wrap items-center justify-between gap-7 rounded-2xl bg-[#0B7A3B] p-8 text-white md:p-11" style={{ backgroundColor: 'var(--deep)', backgroundImage: 'var(--chev)' }}>
               <div>
                 <h2 className="text-2xl font-extrabold">
                   Be in the next photo.

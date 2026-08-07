@@ -271,7 +271,7 @@ export default function TrackRecord() {
       <main>
         {/* Hero */}
         <section className="relative overflow-hidden bg-[#064F26] py-[72px] text-white">
-          <div className="relative z-10 mx-auto w-[92%] max-w-[1160px]">
+          <div className="relative z-10 mx-auto w-[92%] max-w-[1160px]" style={{ backgroundColor: 'var(--deep)', backgroundImage: 'var(--chev)' }}>
             <p className="mb-4 text-sm text-white/65">
               <Link to="/" className="text-white/85 hover:text-[#F4A900]">
                 Home
@@ -365,7 +365,7 @@ export default function TrackRecord() {
         </section>
 
         {/* Constituency Delivery */}
-        <section id="constituency" className="bg-[#F6F8F5] py-[88px]">
+        <section id="constituency" className="bg-[#F6F8F5] py-[88px]" style={{ backgroundColor: 'var(--cream)', backgroundImage: 'var(--chev-light)' }}>
           <div className="mx-auto w-[92%] max-w-[1160px]">
             <div className="mb-11 max-w-3xl">
               <h2 className="text-[clamp(1.8rem,3.4vw,2.6rem)] font-extrabold leading-tight text-[#064F26]">
@@ -490,7 +490,7 @@ export default function TrackRecord() {
         </section>
 
         {/* Sources + CTA */}
-        <section className="bg-[#F6F8F5] py-14">
+        <section className="bg-[#F6F8F5] py-14" style={{ backgroundColor: 'var(--cream)', backgroundImage: 'var(--chev-light)' }}>
           <div className="mx-auto w-[92%] max-w-[1160px]">
             <div className="rounded-2xl bg-white p-7 text-sm text-[#5C665F]">
               <h3 className="mb-3 text-xs font-extrabold uppercase tracking-widest text-[#064F26]">
@@ -531,7 +531,7 @@ export default function TrackRecord() {
               </p>
             </div>
 
-            <div className="mt-8 flex flex-wrap items-center justify-between gap-7 rounded-2xl bg-[#0B7A3B] p-8 text-white md:p-11">
+            <div className="mt-8 flex flex-wrap items-center justify-between gap-7 rounded-2xl bg-[#0B7A3B] p-8 text-white md:p-11" style={{ backgroundColor: 'var(--deep)', backgroundImage: 'var(--chev)' }}>
               <div>
                 <h2 className="text-2xl font-extrabold">
                   The record is the argument.

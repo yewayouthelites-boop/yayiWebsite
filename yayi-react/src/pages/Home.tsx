@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 const GREEN = "#0B7A3B";
 const DEEP = "#064F26";
 const GOLD = "#F4A900";
+const CREAM = "#F6F8F5";
 
 const agendaItems = [
   {
@@ -623,7 +624,7 @@ export default function Home() {
           id="record"
           className="bg-[#F6F8F5] py-20 lg:py-[88px]"
         >
-          <div className="mx-auto w-[92%] max-w-[1160px]">
+          <div className="mx-auto w-[92%] max-w-[1160px]" style={{ backgroundColor: 'var(--cream)', backgroundImage: 'var(--chev-light)' }}>
             <div className="mx-auto mb-11 max-w-[44rem] text-center">
               <h2 className="text-[clamp(1.8rem,3.4vw,2.6rem)] font-extrabold text-[#064F26]">
                 Proven. Prepared.{" "}
@@ -821,7 +822,7 @@ export default function Home() {
         {/* MOMENTUM */}
         <section
           id="momentum"
-          className="relative overflow-hidden py-20 text-white lg:py-[88px]"
+          className="relative overflow-hidden py-20 text-white lg:py-[88px] page-hero"
           style={{ backgroundColor: DEEP }}
         >
           <div className="mx-auto w-[92%] max-w-[1160px]">
@@ -932,7 +933,7 @@ export default function Home() {
         </section>
 
         {/* INVOLVE */}
-        <section id="involve" className="bg-[#F6F8F5] py-20 lg:py-[88px]">
+        <section id="involve" className="bg-[#F6F8F5] py-20 lg:py-[88px]" style={{ backgroundColor: 'var(--cream)', backgroundImage: 'var(--chev-light)' }}>
           <div className="mx-auto w-[92%] max-w-[1160px]">
             <div className="mx-auto mb-11 max-w-[44rem] text-center">
               <h2 className="text-[clamp(1.8rem,3.4vw,2.6rem)] font-extrabold text-[#064F26]">
@@ -1117,7 +1118,7 @@ export default function Home() {
 
                 <div
                   className="rounded-2xl p-7 text-white"
-                  style={{ backgroundColor: DEEP }}
+                  style={{ backgroundColor: 'var(--deep)', backgroundImage: 'var(--chev)' }}
                 >
                   <h3
                     className="mb-2 text-lg font-extrabold"

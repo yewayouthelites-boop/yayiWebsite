@@ -133,7 +133,7 @@ export default function News() {
 
       <main>
 
-        <section className="bg-[#064F26] py-[72px] text-white">
+        <section className="bg-[#064F26] py-[72px] text-white page-hero">
 
           <div className="mx-auto w-[92%] max-w-[1160px]">
 
@@ -188,7 +188,7 @@ export default function News() {
 
         <section
           id="latest-news"
-          className="bg-[#F6F8F5] py-[88px]"
+          className="bg-[#F6F8F5] py-[88px]" style={{ backgroundColor: 'var(--cream)', backgroundImage: 'var(--chev-light)' }}
         >
 
           <div className="mx-auto grid w-[92%] max-w-[1160px] grid-cols-1 gap-10 lg:grid-cols-[1fr_280px]">
