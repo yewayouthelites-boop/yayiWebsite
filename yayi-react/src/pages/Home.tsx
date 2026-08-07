@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 const GREEN = "#0B7A3B";
 const DEEP = "#064F26";
 const GOLD = "#F4A900";
-const CREAM = "#F6F8F5";
 
 const agendaItems = [
   {
@@ -824,7 +823,7 @@ export default function Home() {
           id="momentum"
           className="relative overflow-hidden py-20 text-white lg:py-[88px] page-hero"
           style={{ backgroundColor: DEEP }}
-        >
+      >
           <div className="mx-auto w-[92%] max-w-[1160px]">
             <div className="mb-11 max-w-[44rem]">
               <h2 className="text-[clamp(1.8rem,3.4vw,2.6rem)] font-extrabold text-white">
