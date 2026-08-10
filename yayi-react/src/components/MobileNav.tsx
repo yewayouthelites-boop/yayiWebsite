@@ -54,7 +54,7 @@ export default function MobileNav() {
   };
 
   return (
-    <div className="md:hidden">
+    <div className="lg:hidden">
       <button
         type="button"
         aria-label="Open menu"
@@ -73,7 +73,7 @@ export default function MobileNav() {
           <div
             onClick={close}
             aria-hidden="true"
-            className={`fixed inset-0 z-[9998] bg-black/50 transition-opacity duration-300 md:hidden ${
+            className={`fixed inset-0 z-[9998] bg-black/50 transition-opacity duration-300 lg:hidden ${
               open ? "opacity-100" : "pointer-events-none opacity-0"
             }`}
           />
@@ -83,7 +83,7 @@ export default function MobileNav() {
             role="dialog"
             aria-modal="true"
             aria-label="Menu"
-            className={`fixed right-0 top-0 z-[9999] flex h-[100dvh] w-[86%] max-w-[360px] flex-col shadow-2xl transition-transform duration-300 md:hidden ${
+            className={`fixed right-0 top-0 z-[9999] flex h-[100dvh] w-[86%] max-w-[360px] flex-col shadow-2xl transition-transform duration-300 lg:hidden ${
               open ? "translate-x-0" : "translate-x-full"
             }`}
             style={{ backgroundColor: PANEL }}

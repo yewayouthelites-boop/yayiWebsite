@@ -228,37 +228,37 @@ export default function TrackRecord() {
             </span>
           </Link>
 
-          <nav className="hidden items-center gap-6 md:flex">
-            <Link to="/#about" className="font-semibold hover:text-[#0B7A3B]">
+          <nav className="hidden items-center gap-6 lg:flex">
+            <Link to="/#about" className="whitespace-nowrap font-semibold hover:text-[#0B7A3B]">
               About
             </Link>
 
             <Link
               to="/track-record"
-              className="border-b-2 border-[#F4A900] font-semibold text-[#0B7A3B]"
+              className="whitespace-nowrap border-b-2 border-[#F4A900] font-semibold text-[#0B7A3B]"
             >
               Track Record
             </Link>
 
-            <Link to="/agenda" className="font-semibold hover:text-[#0B7A3B]">
+            <Link to="/agenda" className="whitespace-nowrap font-semibold hover:text-[#0B7A3B]">
               Agenda
             </Link>
 
-            <Link to="/#momentum" className="font-semibold hover:text-[#0B7A3B]">
+            <Link to="/#momentum" className="whitespace-nowrap font-semibold hover:text-[#0B7A3B]">
               Momentum
             </Link>
 
-            <Link to="/news" className="font-semibold hover:text-[#0B7A3B]">
+            <Link to="/news" className="whitespace-nowrap font-semibold hover:text-[#0B7A3B]">
               News
             </Link>
 
-            <Link to="/gallery" className="font-semibold hover:text-[#0B7A3B]">
+            <Link to="/gallery" className="whitespace-nowrap font-semibold hover:text-[#0B7A3B]">
               Gallery
             </Link>
 
             <Link
               to="/#involve"
-              className="rounded-full bg-[#F4A900] px-5 py-2.5 font-bold"
+              className="shrink-0 whitespace-nowrap rounded-full bg-[#F4A900] px-5 py-2.5 font-bold"
             >
               Get Involved
             </Link>

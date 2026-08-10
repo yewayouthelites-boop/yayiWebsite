@@ -302,12 +302,12 @@ export default function Home() {
           <MobileNav />
 
           <ul
-            className="hidden list-none items-center gap-[26px] p-0 md:flex md:flex-row"
+            className="hidden list-none items-center gap-[26px] p-0 lg:flex lg:flex-row"
           >
             <li>
               <a
                 href="#about"
-                className="border-b-2 border-transparent px-0.5 py-1.5 text-lg font-semibold text-white no-underline transition hover:text-[#0B7A3B] hover:border-[#F4A900] md:text-[.92rem] md:text-[#1B1B1B]"
+                className="whitespace-nowrap border-b-2 border-transparent px-0.5 py-1.5 text-lg font-semibold text-white no-underline transition hover:text-[#0B7A3B] hover:border-[#F4A900] md:text-[.92rem] md:text-[#1B1B1B]"
               >
                 About
               </a>
@@ -316,7 +316,7 @@ export default function Home() {
             <li>
               <Link
                 to="/track-record"
-                className="border-b-2 border-transparent px-0.5 py-1.5 text-lg font-semibold text-white no-underline transition hover:text-[#0B7A3B] hover:border-[#F4A900] md:text-[.92rem] md:text-[#1B1B1B]"
+                className="whitespace-nowrap border-b-2 border-transparent px-0.5 py-1.5 text-lg font-semibold text-white no-underline transition hover:text-[#0B7A3B] hover:border-[#F4A900] md:text-[.92rem] md:text-[#1B1B1B]"
               >
                 Track Record
               </Link>
@@ -325,7 +325,7 @@ export default function Home() {
             <li>
               <Link
                 to="/agenda"
-                className="border-b-2 border-transparent px-0.5 py-1.5 text-lg font-semibold text-white no-underline transition hover:text-[#0B7A3B] hover:border-[#F4A900] md:text-[.92rem] md:text-[#1B1B1B]"
+                className="whitespace-nowrap border-b-2 border-transparent px-0.5 py-1.5 text-lg font-semibold text-white no-underline transition hover:text-[#0B7A3B] hover:border-[#F4A900] md:text-[.92rem] md:text-[#1B1B1B]"
               >
                 Agenda
               </Link>
@@ -334,7 +334,7 @@ export default function Home() {
             <li>
               <a
                 href="#momentum"
-                className="border-b-2 border-transparent px-0.5 py-1.5 text-lg font-semibold text-white no-underline transition hover:text-[#0B7A3B] hover:border-[#F4A900] md:text-[.92rem] md:text-[#1B1B1B]"
+                className="whitespace-nowrap border-b-2 border-transparent px-0.5 py-1.5 text-lg font-semibold text-white no-underline transition hover:text-[#0B7A3B] hover:border-[#F4A900] md:text-[.92rem] md:text-[#1B1B1B]"
               >
                 Momentum
               </a>
@@ -343,7 +343,7 @@ export default function Home() {
             <li>
               <Link
                 to="/news"
-                className="border-b-2 border-transparent px-0.5 py-1.5 text-lg font-semibold text-white no-underline transition hover:text-[#0B7A3B] hover:border-[#F4A900] md:text-[.92rem] md:text-[#1B1B1B]"
+                className="whitespace-nowrap border-b-2 border-transparent px-0.5 py-1.5 text-lg font-semibold text-white no-underline transition hover:text-[#0B7A3B] hover:border-[#F4A900] md:text-[.92rem] md:text-[#1B1B1B]"
               >
                 News
               </Link>
@@ -352,7 +352,7 @@ export default function Home() {
             <li>
               <Link
                 to="/gallery"
-                className="border-b-2 border-transparent px-0.5 py-1.5 text-lg font-semibold text-white no-underline transition hover:text-[#0B7A3B] hover:border-[#F4A900] md:text-[.92rem] md:text-[#1B1B1B]"
+                className="whitespace-nowrap border-b-2 border-transparent px-0.5 py-1.5 text-lg font-semibold text-white no-underline transition hover:text-[#0B7A3B] hover:border-[#F4A900] md:text-[.92rem] md:text-[#1B1B1B]"
               >
                 Gallery
               </Link>
@@ -361,7 +361,7 @@ export default function Home() {
             <li>
               <a
                 href="#involve"
-                className="rounded-full px-6 py-3 font-bold no-underline"
+                className="shrink-0 whitespace-nowrap rounded-full px-6 py-3 font-bold no-underline"
                 style={{
                   backgroundColor: GOLD,
                   color: "#1B1B1B",
