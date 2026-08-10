@@ -28,7 +28,7 @@ body {
 }
 
 .page-hero{background:var(--deep) var(--chev);color:#fff;padding:72px 0 56px;position:relative;overflow:hidden}
-.page-hero::after{content:"";position:absolute;right:-120px;bottom:-120px;width:420px;height:420px;background:var(--gold);clip-path:polygon(50% 0,100% 78%,76% 78%,50% 38%,24% 78%,0 78%);opacity:.14;pointer-events:none}
+.page-hero::after{content:"";position:absolute;right:-120px;bottom:-120px;width:420px;height:420px;background:var(--gold);clip-path:polygon(50% 0,100% 78%,76% 78%,50% 38%,24% 78%,0 78%);opacity:.14;}
 
 
 h1,
